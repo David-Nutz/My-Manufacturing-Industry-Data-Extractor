@@ -10,6 +10,14 @@ The functions are also designed for consulting companies specializing in the man
 
 For all these users, my functions provide a straightforward way to access relevant data, automate much of the data preparation process, and move directly to the analysis!
 
+## Project structure
+
+README: Project description
+
+Industry-Codes.pdf : Contains a list of manufacturing Sektors and their WZ Codes. The WZ Code is used by the functions to extract the data regarding that sector. 
+
+
+
 ## Database
 
 The data used are extracted from two tables, provided by the Federal Statistical Department of Germany. The following tables build the fundation:
@@ -22,3 +30,10 @@ The data used are extracted from two tables, provided by the Federal Statistical
 For the functions to work, you have to enter the WZ code, not the sector name. You can find a list of the available sectors in the PDF provided in the repository. This list is based on the code list provided by GENESIS. Please keep in mind that codes may change or be deleted by the Federal Statistical Office. Always check after each function run whether the data was stored successfully. 
 
 
+## Technologies used:
+
+Data Extraction & Cleaning: VS Code (Pandas)
+ETL-Pipeline Construction: VS-Code (requests, getpass, sqlalchemy)
+Data storage: MYSQL Workench and BIG Query
+Dashboard construction: Data Studio, based on BigQuery requests.
+Presentation: Google Slides
