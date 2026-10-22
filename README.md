@@ -55,6 +55,12 @@ Follow the prompts to enter the required information, select the industry code, 
 
 For detailed information about the required inputs, data processing, and database configuration, see the function descriptions in Functions.ipynb.
 
+## Limitations
+
+- One industry per function run: Each function downloads data for only one economic sector per execution. For comparative analyses, the functions must be executed separately for each sector of interest.
+
+- Limited data availability: Table 48121-0003 has a limited time range, which restricts the historical analysis of annual business statistics.
+
 ## Technologies Used
 
 Data Extraction & Cleaning: VS Code (Pandas)
@@ -66,3 +72,30 @@ Data Storage: MySQL Workbench and BigQuery
 Dashboard Construction: Data Studio, based on BigQuery queries.
 
 Presentation: Google Slides
+
+## Data overview
+
+This schema serves as an overview of the available Variables provided by the functions:
+
+![Database Schema](Data overview.png)
+
+## Dashboard example
+
+![Manufacturing Industry Dashboard](Dashboard.png)
+
+This interactive dashboard was built in Looker Studio using data stored in BigQuery. It allows users to explore the economic development of selected German manufacturing sectors and compare their performance across different indicators. It serves as an example of what a user can do with the data.
+
+The dashboard includes:
+
+- Monthly Trends: Track changes in turnover and employment over time.
+- Industry Comparison: Compare the development of the machine tools industry (WZ08-284), the weapons and ammunition industry (WZ08-254), and the automotive parts industry (WZ08-293).
+- Economic Indicators: Examine turnover, employment, gross investment in tangible fixed assets, and gross value added at factor cost.
+- Interactive Filters: Select different indicators and explore the data according to the selected industry and time period.
+
+## Future work
+
+- Integration of additional GENESIS tables: The limited historical availability of Table 48121-0003 makes it useful to expand the ETL pipeline with additional statistics on the German manufacturing industry.
+
+- More detailed economic indicators: Further GENESIS tables provide additional information on investment and cost factors. Integrating these data sources would allow for more comprehensive analyses of the economic development and cost structures of individual manufacturing sectors.
+
+- Extended analytical possibilities: Combining additional data sources would enable more detailed comparisons between manufacturing sectors and provide a broader basis for data-driven decision-making.
