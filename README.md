@@ -44,6 +44,8 @@ pip install pandas requests sqlalchemy pymysql
 
 ## How to use the functions
 
+Get the required information to run the functions and choose the manufacturing sector your interested in (look into the Industry-codes.pdf).
+
 Open Functions.ipynb in Jupyter Notebook or VS Code and execute the cells containing the function definitions.
 
 Run the desired function:
@@ -77,7 +79,7 @@ Presentation: Google Slides
 
 This schema serves as an overview of the available Variables provided by the functions:
 
-![Database Schema](Data overview.png)
+![Database Schema](Data%20overview.png)
 
 ## Dashboard example
 
