@@ -30,6 +30,31 @@ Table 48121-0003 – Annual data: Contains annual business statistics by economi
 
 For the functions to work, you have to enter the WZ code, not the sector name. You can find a list of the available sectors in the PDF provided in the repository. This list is based on the code list provided by GENESIS. Please keep in mind that codes may change or be deleted by the Federal Statistical Office. Always check after each function run whether the data was stored successfully.
 
+## Requirements and Installation
+
+The following requirements must be met to use the functions:
+
+- Python and the required libraries (pandas, requests, sqlalchemy, and pymysql).
+- A valid GENESIS-Online account to access the API. --> https://genesis.destatis.de/datenbank/online/#modal=login
+- A running MySQL server and valid login credentials.
+- Sufficient MySQL permissions to create databases and tables and insert data.
+
+Install the required Python libraries using pip:
+pip install pandas requests sqlalchemy pymysql
+
+## How to use the functions
+
+Open Functions.ipynb in Jupyter Notebook or VS Code and execute the cells containing the function definitions.
+
+Run the desired function:
+
+df_monthly = Funktion_monthly()
+df_annual = Funktion_annual()
+
+Follow the prompts to enter the required information, select the industry code, define the data period, and configure the database connection.
+
+For detailed information about the required inputs, data processing, and database configuration, see the function descriptions in Functions.ipynb.
+
 ## Technologies Used
 
 Data Extraction & Cleaning: VS Code (Pandas)
